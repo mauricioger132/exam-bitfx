@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header">
                     <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-                        Launch demo modal
+                        Importar proveedores
                       </button>
                 </div>
                 <div class="card-body">
