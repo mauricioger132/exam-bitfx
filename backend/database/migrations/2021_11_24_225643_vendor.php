@@ -16,8 +16,9 @@ class Vendor extends Migration
         Schema::create('vendors', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('rfc');
+            $table->string('password')->nullable();
             $table->timestamps();
         });
     }

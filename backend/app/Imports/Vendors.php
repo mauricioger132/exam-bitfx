@@ -20,7 +20,6 @@ class Vendors implements ToCollection
     }
     public function collection(Collection $rows)
     {
-        //dd($this->aux);
         $data =[];
         foreach($rows as $key=> $row){
             if($key!==0)

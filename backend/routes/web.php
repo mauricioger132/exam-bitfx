@@ -24,4 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 /* Routes vendors*/
 
 Route::match(['GET','POST'],'/import-vendors', [App\Http\Controllers\VendorController::class, 'importVendors'])->name('import.vendors');
-
+Route::get('/cancel', function () {
+    session()->flash('danger', 'Operacion cancelada');
+    return redirect()->route('home');
+})->name('cancel');

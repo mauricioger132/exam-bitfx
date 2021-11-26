@@ -20,27 +20,11 @@
               <input type="file" name="vendor" class="custom-file-input" id="inputGroupFile01">
               <label class="custom-file-label" for="inputGroupFile01">Selecciona documento .txt o .csv</label>
             </div>
-            <input type="text" name="aux" id="aux">
           </div>
-          <div class="table-responsive">
-            <table class="table">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Nombre</th>
-                  <th scope="col">Correo electrónico</th>
-                  <th scope="col">RFC</th>
-                </tr>
-              </thead>
-              <tbody>
-  
-              </tbody>
-            </table>
-          </div> 
         </div>
-  
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary" onclick="confirmData()" >Importar</button>
+          <button type="submit" class="btn btn-primary"  >Importar</button>
         </div>
 
       </form>
