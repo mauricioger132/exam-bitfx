@@ -34,6 +34,7 @@
                                 <th scope="col">Nombre_completo</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">RFC</th>
+                                <th scope="col">Acciones</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -43,6 +44,13 @@
                                             <td>{{$vendor->name}}</td>
                                             <td>{{$vendor->email}}</td>
                                             <td>{{$vendor->rfc}}</td>
+                                            <td>
+                                                <button class="btn btn-secondary btn-sm modalPassword" 
+                                                        data-toggle="tooltip" 
+                                                        title="Asignar contraseña"
+                                                        data-id={{Crypt::encrypt($vendor->id)}}
+                                                 ><i class="fas fa-key"></i></button>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 @else
@@ -57,4 +65,34 @@
     </div>
 </div>
 @include('modals.add-vendor')
+@include('modals.add-pwd')
 @endsection
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script>
+$(function() {
+
+    $(".modalPassword").on('click',function(){
+        $("#id").val($(this).data('id'));
+        $("#modal-pwrcc").modal('show');
+    });
+    
+    $(".save-pwd").on('click',function(){
+       
+        $("#p-info").empty();
+        if($("#passw").val() == $("#pwd-confirm").val() ){
+     
+            $(this).text('Espere...');
+            $(this).prop('disabled', true);
+            $('.save-pwd').submit();
+            
+        }else{
+         
+            $("#p-info").append('<div class="alert alert-danger text-center" role="alert">Las contraseñas no coinciden..!!</div>');
+        }
+       
+    });
+    
+});
+</script>
+

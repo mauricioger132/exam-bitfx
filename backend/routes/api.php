@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/getVendor/{email}/{pass}', [App\Http\Controllers\VendorController::class, 'getVendor'])->name('get.vendor');

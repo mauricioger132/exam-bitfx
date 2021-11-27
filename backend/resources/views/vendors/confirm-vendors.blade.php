@@ -21,9 +21,9 @@
                                 @if(!empty($data))
                                     @foreach ($data as $item)
                                         <tr>
-                                            <td>{{$item['nombre_completo']}} </td>
-                                            <td>{{$item['email']}} </td>
-                                            <td>{{$item['rfc']}} </td>
+                                            <td>{{$item[0]}}</td>
+                                            <td>{{$item[1]}}</td>
+                                            <td>{{$item[2]}}</td>
                                         </tr>
                                     @endforeach
                                 @else

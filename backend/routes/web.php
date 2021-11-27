@@ -28,3 +28,4 @@ Route::get('/cancel', function () {
     session()->flash('danger', 'Operacion cancelada');
     return redirect()->route('home');
 })->name('cancel');
+Route::post('/add-pwd',[App\Http\Controllers\VendorController::class, 'addPassword'])->name('add.password');
