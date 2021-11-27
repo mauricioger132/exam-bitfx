@@ -14,7 +14,7 @@
         <div class="modal-body">
           <div class="input-group mb-3">
             <div class="custom-file">
-              <input type="file" name="vendor" class="custom-file-input" id="inputGroupFile01">
+              <input type="file" name="vendor" class="custom-file-input" id="inputGroupFile01" accept=".txt,.csv,.xlsx ," required  >
               <label class="custom-file-label" for="inputGroupFile01">Selecciona documento .txt o .csv</label>
             </div>
           </div>
