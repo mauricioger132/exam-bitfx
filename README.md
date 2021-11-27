@@ -10,7 +10,7 @@ Ejemplo :
 
 ANA ISABEL SALAS VARGAS,betote_me@hotmail.com,COMJ710302V91,GABRIELA ANGELICA DAVALO,gb@gmail.com,MOGL641101577,LAURA GONZALEZ ROBLES,laurag@gmail.com,MAGE731023UK8
 
-Una vez cargo el txt el administrador puede generar las contraseñas 
+Una vez cargado el txt el administrador puede generar las contraseñas dando click en la llave que se muestra en la tabla cuando se inicia sesión
 
 Front end
 
